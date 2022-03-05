@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane layoutX="213.0" prefHeight="42.0" prefWidth="787.0" style="-fx-background-color: #2c3e50;">
+         <children>
+            <Label fx:id="lblTitle" layoutX="42.0" layoutY="4.0" prefHeight="33.0" prefWidth="388.0" text="Hi &lt;Name&gt; Welcome To The Sale!" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Separator layoutY="11.0" opacity="0.38" orientation="VERTICAL" prefHeight="21.0" prefWidth="3.0" />
+            <Separator layoutX="443.0" layoutY="10.0" opacity="0.38" orientation="VERTICAL" prefHeight="21.0" prefWidth="3.0" />
+            <Label fx:id="lblDate" layoutX="489.0" layoutY="5.0" prefHeight="33.0" prefWidth="120.0" text="2019.01.17" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="613.0" layoutY="10.0" opacity="0.38" orientation="VERTICAL" prefHeight="21.0" prefWidth="3.0" />
+            <Label fx:id="lblTime" layoutX="674.0" prefHeight="42.0" prefWidth="105.0" text="1:45:28" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="625.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-clock-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="452.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-2012-30.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8_human_head_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #2c3e50;">
+         <children>
+            <Label layoutX="53.0" layoutY="347.0" text="Only Admin" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnManageCustomers" accessibleText="Handle Car Park" layoutX="-1.0" layoutY="170.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="54.0" prefWidth="214.0" style="-fx-background-color: #ffcc00;" text="Manage Customers">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="79.0" fitWidth="162.0" layoutX="22.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/index-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnPlaceOrders" accessibleText="Manage Customers" layoutX="-1.0" layoutY="276.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="54.0" prefWidth="214.0" style="-fx-background-color: #ffcc00;" text="Place Orders">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnManageItems" accessibleText="Handle Packages" layoutX="-1.0" layoutY="223.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="54.0" prefWidth="214.0" style="-fx-background-color: #ffcc00;" text="Mange Items">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHome" accessibleText="Handle Car Park" layoutX="-1.0" layoutY="117.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="54.0" prefWidth="214.0" style="-fx-background-color: #ffcc00;" text="Home">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnRegisterNewUser" accessibleText="Register New User" layoutX="-1.0" layoutY="383.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="54.0" prefWidth="214.0" style="-fx-background-color: #ffcc00;" text="Register New User">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReports" accessibleText="Settings" layoutX="-1.0" layoutY="437.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="54.0" prefWidth="214.0" style="-fx-background-color: #ffcc00;" text="Reports">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLogout" accessibleText="Log Out" layoutX="-1.0" layoutY="517.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="42.0" prefWidth="214.0" style="-fx-background-color: #ae0e0e#ae0e0e;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="root2" layoutX="222.0" layoutY="49.0" prefHeight="542.0" prefWidth="770.0" style="-fx-background-color: #ffffff; -fx-background-radius: 1em;">
+         <children>
+            <ImageView fitHeight="431.0" fitWidth="472.0" layoutX="186.0" layoutY="87.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../PosSystem/src/view/assests/images/warehouse-logistics-vector-illustration-set-cartoon-flat-worker-people-work-wholesale-stockroom-storehouse-isolated-carry-191310686-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDescription" alignment="CENTER" layoutX="83.0" layoutY="59.0" prefHeight="16.0" prefWidth="577.0" text="Please select one of above main operations to proceed">
+               <font>
+                  <Font name="Ubuntu" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMenu" alignment="CENTER" layoutX="77.0" layoutY="21.0" prefHeight="26.0" prefWidth="577.0" text="Welcome" textAlignment="CENTER" textFill="#0a39f7">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

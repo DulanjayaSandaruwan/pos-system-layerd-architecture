@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="770.0" style="-fx-background-color: #95a5a6; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageUsersFormController">
+   <children>
+      <Label layoutX="553.0" layoutY="10.0" text="Registerd Users">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Separator layoutX="441.0" opacity="0.21" orientation="VERTICAL" prefHeight="538.0" prefWidth="16.0" />
+      <Label layoutX="267.0" layoutY="64.0" prefHeight="26.0" prefWidth="59.0" text="User ID:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="lblUserID" layoutX="330.0" layoutY="70.0" prefHeight="16.0" prefWidth="95.0" />
+      <JFXButton fx:id="btnAddNewUser" layoutX="264.0" layoutY="23.0" onAction="#btnAddNewUserOnAction" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #006699; -fx-background-radius: 2em;" text="+ Add New User" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtUserFullName" focusColor="#00050d" labelFloat="true" layoutX="25.0" layoutY="115.0" prefHeight="26.0" prefWidth="406.0" promptText="User Full Name" />
+      <JFXTextField fx:id="txtUserNIC" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="157.0" prefHeight="26.0" prefWidth="406.0" promptText="User NIC" />
+      <JFXTextField fx:id="txtUserAddress" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="201.0" prefHeight="26.0" prefWidth="406.0" promptText="User Address" />
+      <JFXTextField fx:id="txtUserContact" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="243.0" prefHeight="26.0" prefWidth="406.0" promptText="User Contact" />
+      <JFXTextField fx:id="txtUserMail" focusColor="BLACK" labelFloat="true" layoutX="26.0" layoutY="285.0" prefHeight="26.0" prefWidth="406.0" promptText="User E-Mail" />
+      <JFXPasswordField fx:id="txtUserNewPassword" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="327.0" prefHeight="26.0" prefWidth="406.0" promptText="New Password" />
+      <JFXPasswordField fx:id="txtUserConfirmPassword" focusColor="BLACK" labelFloat="true" layoutX="26.0" layoutY="365.0" prefHeight="26.0" prefWidth="406.0" promptText="Confirm Password" />
+      <JFXComboBox fx:id="cmbUserRole" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="439.0" prefHeight="26.0" prefWidth="165.0" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnSaveUsers" layoutX="222.0" layoutY="498.0" onAction="#btnSaveUsersOnAction" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #339966; -fx-background-radius: 2em;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteUsers" layoutX="327.0" layoutY="498.0" onAction="#btnDeleteUsersOnAction" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #ff4d4d; -fx-background-radius: 2em;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="27.0" layoutY="421.0" prefHeight="16.0" prefWidth="126.0" text="User Role" />
+      <TableView fx:id="tblUsers" layoutX="460.0" layoutY="41.0" prefHeight="490.0" prefWidth="298.0">
+        <columns>
+            <TableColumn fx:id="colUserID" prefWidth="111.0" text="User ID" />
+          <TableColumn fx:id="colUsers" prefWidth="215.0" text="User Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

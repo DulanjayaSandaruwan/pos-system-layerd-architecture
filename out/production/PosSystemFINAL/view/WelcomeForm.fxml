@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="770.0" style="-fx-background-color: #ffffff; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeFormConstroller">
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="472.0" layoutX="163.0" layoutY="87.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/warehouse-logistics-vector-illustration-set-cartoon-flat-worker-people-work-wholesale-stockroom-storehouse-isolated-carry-191310686-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="83.0" layoutY="59.0" prefHeight="16.0" prefWidth="577.0" text="Please select one of above main operations to proceed">
+         <font>
+            <Font name="Ubuntu" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="77.0" layoutY="21.0" prefHeight="26.0" prefWidth="577.0" text="Welcome" textAlignment="CENTER" textFill="#0a39f7">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

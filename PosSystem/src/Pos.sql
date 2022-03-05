@@ -1,0 +1,72 @@
+DROP DATABASE IF EXISTS Pos;
+CREATE DATABASE IF NOT EXISTS Pos;
+SHOW DATABASES ;
+USE Pos;
+
+CREATE TABLE Users(
+	UserId VARCHAR(6),
+	UserName VARCHAR(100)not null,
+	Nic VARCHAR(100)not null,
+	Address VARCHAR(100)not null,
+	Contact VARCHAR(100)not null,
+	Email VARCHAR(100)not null,
+	Password VARCHAR(100)not null,
+	UserRole VARCHAR(100)not null,
+	CONSTRAINT PRIMARY KEY (UserId)
+);
+
+DROP TABLE IF EXISTS Customer;
+CREATE TABLE IF NOT EXISTS Customer(
+   CustId VARCHAR(6),
+   CustTitle VARCHAR(5) ,
+   Custname VARCHAR(30) NOT NULL DEFAULT 'Unknown',
+   CustAddress VARCHAR(30),
+   City VARCHAR(20),
+   Province VARCHAR(20),
+   PostalCode VARCHAR(9),
+   CONSTRAINT PRIMARY KEY (CustId)
+);
+SHOW TABLES ;
+DESCRIBE Customer;
+
+DROP TABLE IF EXISTS `Order`;
+CREATE TABLE IF NOT EXISTS `Order`(
+   OrderId VARCHAR(15),
+   OrderDate DATE,
+   CustId VARCHAR(6),
+   CONSTRAINT PRIMARY KEY (OrderId),
+   CONSTRAINT FOREIGN KEY (CustId) REFERENCES Customer(CustId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SHOW TABLES ;
+DESCRIBE `Order`;
+
+DROP TABLE IF EXISTS Item;
+CREATE TABLE IF NOT EXISTS Item(
+   ItemCode VARCHAR(6),
+   Description VARCHAR (50),
+   PackSize VARCHAR (6),
+   UnitPrice DECIMAL (6, 2),
+   QtyOnHand INT (5),
+   CONSTRAINT PRIMARY KEY (Itemcode)
+);
+SHOW TABLES ;
+DESCRIBE Item;
+
+DROP TABLE IF EXISTS OrderDetails;
+CREATE TABLE IF NOT EXISTS OrderDetails(
+   ItemCode VARCHAR(6),
+   OrderId VARCHAR(6),
+   OrderQty INT(11),
+   PricePerQty Decimal(6,2),
+   Discount DOUBLE(6, 2),
+   Cost Decimal(6,2),
+   CONSTRAINT PRIMARY KEY (ItemCode, OrderId),
+   CONSTRAINT FOREIGN KEY (ItemCode) REFERENCES Item(ItemCode) ON DELETE CASCADE ON UPDATE CASCADE ,
+   CONSTRAINT FOREIGN KEY (OrderId) REFERENCES `Order`(OrderId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SHOW TABLES ;
+DESCRIBE OrderDetails;
+
+
+
+
